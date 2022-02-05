@@ -12,9 +12,9 @@ public class EmployeeWageComputation {
 		//Computation
 		double empCheck = Math.floor(Math.random() * 10) % 2;
 		if(empCheck == IS_FULL_TIME)
-			System.out.println("Employee is present: " + empCheck);
+			System.out.println("Employee is present!!: " + empCheck);
 		else
-			System.out.println("Employee is Absent: " + empCheck);
+			System.out.println("Employee is Absent!!: " + empCheck);
 
 	}
 
