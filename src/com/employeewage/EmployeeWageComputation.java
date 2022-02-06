@@ -1,6 +1,21 @@
 package com.employeewage;
 
 public class EmployeeWageComputation {
+	
+	public static int empStatus() {
+		int empHrs;
+		int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+		switch(empCheck) {
+		case 1: empHrs=8;
+				break;
+		case 2: empHrs=4;
+				break;
+		default: empHrs=0;
+				break;	
+		}
+		return empHrs;
+	}
+	
 
 	public static void main(String[] args) {
 		System.out.println("Start with Displaying\r\n"
@@ -22,16 +37,9 @@ public class EmployeeWageComputation {
 	
 			//Computing salary for 20 days
 				while (totalworkingHour < MAX_WORKING_HOURS && totalworkingDays < MAX_WORKING_DAYS) {
-					int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+					
 					totalworkingDays++;
-					switch(empCheck) {
-						case 1: empHrs=8;
-								break;
-						case 2: empHrs=4;
-								break;
-						default: empHrs=0;
-								break;	
-				}
+					empHrs = empStatus();
 					empWage = EMP_RATE_PER_HOUR * empHrs;
 					totalEmpWage += empWage;
 					totalworkingHour = totalworkingHour + empHrs;
