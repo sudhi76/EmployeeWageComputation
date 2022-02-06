@@ -12,14 +12,17 @@ public class EmployeeWageComputation {
 		final int IS_PART_TIME = 2;
 		final int EMP_RATE_PER_HOUR = 20;
 		final int MAX_WORKING_DAYS = 20;
+		final int MAX_WORKING_HOURS = 100;
 		//variable
 		int empHrs = 0;
 		int empWage = 0;
 		int totalEmpWage = 0;
 		int totalworkingDays = 0;
-	
-			//Computing salary for 20 days
-				while (totalworkingDays < MAX_WORKING_DAYS) {
+		int totalworkingHour = 0;
+		
+		//Computing salary for 20 days
+		while (totalworkingHour < MAX_WORKING_HOURS && totalworkingDays < MAX_WORKING_DAYS) {
+			totalworkingDays++;
 					int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 					totalworkingDays++;
 					switch(empCheck) {
