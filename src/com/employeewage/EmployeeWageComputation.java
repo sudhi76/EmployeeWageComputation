@@ -19,10 +19,9 @@ public class EmployeeWageComputation {
 		int totalEmpWage = 0;
 		int totalworkingDays = 0;
 		int totalworkingHour = 0;
-		
-		//Computing salary for 20 days
-		while (totalworkingHour < MAX_WORKING_HOURS && totalworkingDays < MAX_WORKING_DAYS) {
-			totalworkingDays++;
+	
+			//Computing salary for 20 days
+				while (totalworkingHour < MAX_WORKING_HOURS && totalworkingDays < MAX_WORKING_DAYS) {
 					int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 					totalworkingDays++;
 					switch(empCheck) {
@@ -35,6 +34,7 @@ public class EmployeeWageComputation {
 				}
 					empWage = EMP_RATE_PER_HOUR * empHrs;
 					totalEmpWage += empWage;
+					totalworkingHour = totalworkingHour + empHrs;
 					
 			}
 				System.out.println("Total wage for a month = " + totalEmpWage);
